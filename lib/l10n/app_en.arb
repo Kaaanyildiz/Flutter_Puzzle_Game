@@ -1,6 +1,6 @@
 {
   "@@locale": "en",
-  "appName": "Puzzle Game",
+  "appName": "Puzzle Craft",
   "easyLevel": "Easy",
   "mediumLevel": "Medium",
   "hardLevel": "Hard",
@@ -51,5 +51,74 @@
   "tutorialStep1": "Tap on a tile to move it into an empty space.",
   "tutorialStep2": "Arrange all tiles in the correct order to complete the puzzle.",
   "tutorialStep3": "Use fewer moves and finish faster for a better score!",
-  "getStarted": "Get Started"
+  "getStarted": "Get Started",
+
+  "tipsAndStrategies": "Tips and Strategies",
+  "skillsDevelopment": "This game develops the following skills:",
+  "visualPerception": "Visual perception and attention",
+  "problemSolving": "Problem solving skills",
+  "logicalThinking": "Logical thinking",
+  "patienceConcentration": "Patience and concentration",
+
+  "shuffledPuzzle": "1. Shuffled Puzzle",
+  "shuffledPuzzleDesc": "When the game starts, you'll see puzzle pieces in a scrambled state.",
+  "movingPieces": "2. Moving Pieces",
+  "movingPiecesDesc": "You can move pieces by tapping on them if they are adjacent to the empty space. Only pieces neighboring the empty space can be moved.",
+  "gameGoal": "3. Game Goal",
+  "gameGoalDesc": "Try to place all pieces in the correct order. You complete the game when the pieces are arranged sequentially.",
+  "gameComplete": "The game is complete when all pieces are placed correctly!",
+
+  "cornersTip": "Start with corners",
+  "cornersTipDesc": "First place the corner pieces in their correct positions.",
+  "topRowTip": "Complete the top row",
+  "topRowTipDesc": "After placing the corners, continue by completing the top row.",
+  "leftColumnTip": "Complete the left column",
+  "leftColumnTipDesc": "After completing the top row, proceed by placing the left column.",
+  "patienceTip": "Be patient",
+  "patienceTipDesc": "Sometimes you may need to temporarily displace some pieces to place another one.",
+
+  "moveForward": "Forward",
+  "moveBack": "Back",
+
+  "movePlanning": "Move Planning",
+  "movePlanningDesc": "A good puzzle solver plans their moves in advance. Think about the sequence of moves needed before placing a piece.",
+  "advancedThinking": "Advanced Thinking",
+  "advancedThinkingDesc": "By thinking about a series of moves rather than a single move, you can solve complex situations.",
+
+  "usefulTechniques": "Useful Techniques",
+  "techniqueHeader": "Technique",
+  "descriptionHeader": "Description",
+  "moveTile": "Moving a tile",
+  "moveTileDesc": "Move by tapping on pieces around the empty space",
+  "cycleMovement": "Cycle movement",
+  "cycleMovementDesc": "Arrange pieces by moving them in a cyclic pattern",
+  "tempDisplacement": "Temporary displacement",
+  "tempDisplacementDesc": "Temporarily place a piece in the wrong position",
+  
+  "stuckTip": "When stuck, sometimes taking a step back helps you see the way forward.",
+
+  "difficultyLevels": "Difficulty Levels",
+  "easyDifficulty": "Easy",
+  "easyDifficultyDesc": "3x3 puzzle layout (9 pieces)",
+  "easyFeature1": "Easier solution with fewer pieces",
+  "easyFeature2": "Ideal for beginners",
+  "easyFeature3": "Perfect for learning basic strategies",
+  "easyFeature4": "Unlimited moves",
+
+  "mediumDifficulty": "Medium",
+  "mediumDifficultyDesc": "4x4 puzzle layout (16 pieces)",
+  "mediumFeature1": "Medium difficulty level",
+  "mediumFeature2": "Requires more thinking",
+  "mediumFeature3": "Ideal for developing cognitive skills",
+  "mediumFeature4": "Requires good strategy",
+
+  "hardDifficulty": "Hard",
+  "hardDifficultyDesc": "5x5 puzzle layout (25 pieces)",
+  "hardFeature1": "High difficulty level",
+  "hardFeature2": "Requires more complex solution strategies",
+  "hardFeature3": "A perfect challenge for experienced players",
+  "hardFeature4": "Requires intense thinking and planning",
+
+  "puzzleBenefits": "Puzzle games are a perfect way to have fun while improving your mental skills.",
+  "readyToSolve": "Ready to solve puzzles?"
 }

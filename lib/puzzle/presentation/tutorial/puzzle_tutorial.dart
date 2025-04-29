@@ -4,7 +4,7 @@ import 'package:puzzlegame/core/theme/fun_app_theme.dart';
 import 'package:puzzlegame/core/widgets/custom_button.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-/// Puzzle Oyunu öğretici ekranı
+/// Puzzle Craft öğretici ekranı
 ///
 /// Oyunun nasıl oynanacağını gösteren kapsamlı öğretici ekran
 class PuzzleTutorial extends StatefulWidget {
@@ -58,6 +58,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     // FunAppTheme.primaryColor'dan koyu renk üretmek için
     Color darkPrimaryColor = Color.fromARGB(
       FunAppTheme.primaryColor.alpha, // .a as int yerine direkt .alpha kullanıyoruz (zaten int)
@@ -92,7 +94,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   ).animate().scale(duration: const Duration(milliseconds: 600), curve: Curves.elasticOut),
                   const SizedBox(width: 12),
                   Text(
-                    AppLocalizations.of(context)!.appName, // AppStrings yerine AppLocalizations kullanımı
+                    "Puzzle Craft", // AppLocalizations.of(context)!.appName yerine sabit değer kullanıyorum
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -126,7 +128,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                 children: [
                   if (_currentPageIndex > 0)
                     CustomButton(
-                      text: "Geri",
+                      text: localizations.moveBack,
                       onPressed: _previousPage,
                       icon: Icons.arrow_back,
                       type: ButtonType.outlined,
@@ -152,7 +154,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   ),
                   
                   CustomButton(
-                    text: _currentPageIndex == _totalPages - 1 ? AppLocalizations.of(context)!.getStarted : "İleri",
+                    text: _currentPageIndex == _totalPages - 1 ? localizations.getStarted : localizations.moveForward,
                     onPressed: _nextPage,
                     icon: _currentPageIndex == _totalPages - 1
                         ? Icons.play_arrow
@@ -170,6 +172,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
 
   // Giriş sayfası
   Widget _buildIntroductionPage(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
@@ -198,7 +202,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
           const SizedBox(height: 32),
           
           Text(
-            AppLocalizations.of(context)!.tutorialTitle,
+            localizations.tutorialTitle,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -209,7 +213,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
           const SizedBox(height: 20),
           
           Text(
-            AppLocalizations.of(context)!.tutorialStep1,
+            localizations.tutorialStep1,
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               color: Colors.white,
             ),
@@ -231,7 +235,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    'Bu oyun şu becerileri geliştirir:',
+                    localizations.skillsDevelopment,
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -242,25 +246,25 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   _buildBenefitItem(
                     context,
                     Icons.visibility,
-                    'Görsel algı ve dikkat'
+                    localizations.visualPerception
                   ),
                   const SizedBox(height: 8),
                   _buildBenefitItem(
                     context,
                     Icons.psychology,
-                    'Problem çözme becerisi'
+                    localizations.problemSolving
                   ),
                   const SizedBox(height: 8),
                   _buildBenefitItem(
                     context,
                     Icons.fact_check,
-                    'Mantıksal düşünme'
+                    localizations.logicalThinking
                   ),
                   const SizedBox(height: 8),
                   _buildBenefitItem(
                     context,
                     Icons.timelapse,
-                    'Sabır ve konsantrasyon'
+                    localizations.patienceConcentration
                   ),
                 ],
               ),
@@ -273,12 +277,14 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
 
   // Nasıl oynanır sayfası
   Widget _buildHowToPlayPage(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
         children: [
           Text(
-            AppLocalizations.of(context)!.howToPlay,
+            localizations.howToPlay,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -304,7 +310,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 16),
                   
                   Text(
-                    '1. Karıştırılmış Puzzle',
+                    localizations.shuffledPuzzle,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -313,7 +319,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 8),
                   
                   Text(
-                    'Oyun başladığında, karışık durumdaki puzzle parçalarını görürsünüz.',
+                    localizations.shuffledPuzzleDesc,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -390,7 +396,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 16),
                   
                   Text(
-                    '2. Parçaları Taşıma',
+                    localizations.movingPieces,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -399,7 +405,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 8),
                   
                   Text(
-                    'Boş alanın yanındaki parçalara dokunarak onları boş alana taşıyabilirsiniz. Sadece boş alanın komşusu olan parçaları hareket ettirebilirsiniz.',
+                    localizations.movingPiecesDesc,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -495,7 +501,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 16),
                   
                   Text(
-                    '3. Oyunun Hedefi',
+                    localizations.gameGoal,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -504,7 +510,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 8),
                   
                   Text(
-                    'Tüm parçaları doğru sırayla yerleştirmeye çalışın. Parçalar sıralı şekilde dizildiğinde oyunu tamamlamış olursunuz.',
+                    localizations.gameGoalDesc,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -548,7 +554,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                         const SizedBox(width: 8),
                         Flexible(
                           child: Text(
-                            'Tüm parçalar doğru yerleştiğinde oyun tamamlanır!',
+                            localizations.gameComplete,
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               color: Colors.green.shade800,
@@ -569,12 +575,14 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
 
   // İpuçları sayfası
   Widget _buildTipsPage(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
         children: [
           Text(
-            'İpuçları ve Stratejiler',
+            localizations.tipsAndStrategies,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -601,8 +609,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   
                   _buildTipItem(
                     context,
-                    'Köşelerden başlayın',
-                    'Öncelikle köşe parçalarını doğru yerlerine yerleştirin.',
+                    localizations.cornersTip,
+                    localizations.cornersTipDesc,
                     Icons.crop_square,
                   ),
                   
@@ -612,8 +620,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   
                   _buildTipItem(
                     context,
-                    'Üst satırı tamamlayın',
-                    'Köşeleri yerleştirdikten sonra, üst satırı tamamlayarak devam edin.',
+                    localizations.topRowTip,
+                    localizations.topRowTipDesc,
                     Icons.keyboard_arrow_up,
                   ),
                   
@@ -623,8 +631,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   
                   _buildTipItem(
                     context,
-                    'Sol sütunu tamamlayın',
-                    'Üst satırı tamamladıktan sonra, sol sütunu yerleştirerek ilerleyin.',
+                    localizations.leftColumnTip,
+                    localizations.leftColumnTipDesc,
                     Icons.keyboard_arrow_left,
                   ),
                   
@@ -634,8 +642,8 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   
                   _buildTipItem(
                     context,
-                    'Sabırlı olun',
-                    'Bazen bir parçayı yerleştirmek için diğer parçaları geçici olarak yerinden çıkarmanız gerekebilir.',
+                    localizations.patienceTip,
+                    localizations.patienceTipDesc,
                     Icons.timelapse,
                   ),
                 ],
@@ -661,7 +669,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 12),
                   
                   Text(
-                    'Hamle Planlama',
+                    localizations.movePlanning,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -670,7 +678,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 12),
                   
                   Text(
-                    'İyi bir puzzle çözücü, hamleleri önceden planlar. Bir parçayı yerine koymadan önce, bunun için gereken hamle dizisini düşünün.',
+                    localizations.movePlanningDesc,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -691,7 +699,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                             Icon(Icons.psychology, color: Colors.orange),
                             const SizedBox(width: 8),
                             Text(
-                              'İleri Düşünme',
+                              localizations.advancedThinking,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.orange.shade800,
@@ -701,7 +709,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                         ),
                         const SizedBox(height: 8),
                         Text(
-                          'Tek bir hamle değil, bir dizi hamle düşünerek karmaşık durumları çözebilirsiniz.',
+                          localizations.advancedThinkingDesc,
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ],
@@ -722,7 +730,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
               child: Column(
                 children: [
                   Text(
-                    'Yararlı Teknikler',
+                    localizations.usefulTechniques,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
@@ -737,10 +745,10 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                       width: 1,
                     ),
                     children: [
-                      _buildTableRow(context, 'Teknik', 'Açıklama', isHeader: true),
-                      _buildTableRow(context, 'Parçayı taşıma', 'Boş alan etrafındaki parçalara dokunarak taşıma'),
-                      _buildTableRow(context, 'Döngü hareketi', 'Parçaları döngüsel olarak hareket ettirerek düzenleme'),
-                      _buildTableRow(context, 'Geçici yer değiştirme', 'Bir parçayı geçici olarak yanlış yere koyma'),
+                      _buildTableRow(context, localizations.techniqueHeader, localizations.descriptionHeader, isHeader: true),
+                      _buildTableRow(context, localizations.moveTile, localizations.moveTileDesc),
+                      _buildTableRow(context, localizations.cycleMovement, localizations.cycleMovementDesc),
+                      _buildTableRow(context, localizations.tempDisplacement, localizations.tempDisplacementDesc),
                     ],
                   ),
                 ],
@@ -765,7 +773,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(width: 8),
                   Flexible(
                     child: Text(
-                      'Takıldığınızda bazen bir adım geri gitmek, ileriyi görmek için yardımcı olabilir.',
+                      localizations.stuckTip,
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 13.0, // Metin boyutunu küçültüyorum
@@ -783,12 +791,14 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
 
   // Zorluk seviyeleri sayfası
   Widget _buildDifficultyLevelsPage(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
         children: [
           Text(
-            'Zorluk Seviyeleri',
+            localizations.difficultyLevels,
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -800,15 +810,15 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
           
           _buildDifficultyCard(
             context,
-            'Kolay',
-            '3x3 puzzle düzeni (9 parça)',
+            localizations.easyDifficulty,
+            localizations.easyDifficultyDesc,
             Colors.green,
             Icons.sentiment_satisfied,
             [
-              'Daha az parça ile kolay çözüm',
-              'Başlangıç seviyesi için idealdir',
-              'Temel stratejileri öğrenmek için mükemmel',
-              'Sınırsız hamle hakkı',
+              localizations.easyFeature1,
+              localizations.easyFeature2,
+              localizations.easyFeature3,
+              localizations.easyFeature4,
             ],
           ),
           
@@ -816,15 +826,15 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
           
           _buildDifficultyCard(
             context,
-            'Orta',
-            '4x4 puzzle düzeni (16 parça)',
+            localizations.mediumDifficulty,
+            localizations.mediumDifficultyDesc,
             Colors.orange,
             Icons.sentiment_neutral,
             [
-              'Orta zorluk seviyesi',
-              'Daha fazla düşünme gerektirir',
-              'Bilişsel becerileri geliştirmek için ideal',
-              'İyi strateji gerektirir',
+              localizations.mediumFeature1,
+              localizations.mediumFeature2,
+              localizations.mediumFeature3,
+              localizations.mediumFeature4,
             ],
           ),
           
@@ -832,15 +842,15 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
           
           _buildDifficultyCard(
             context,
-            'Zor',
-            '5x5 puzzle düzeni (25 parça)',
+            localizations.hardDifficulty,
+            localizations.hardDifficultyDesc,
             Colors.red,
             Icons.sentiment_very_dissatisfied,
             [
-              'Yüksek zorluk seviyesi',
-              'Daha karmaşık çözüm stratejileri gerektirir',
-              'Deneyimli oyuncular için mükemmel bir meydan okuma',
-              'Yoğun düşünme ve planlama gerektirir',
+              localizations.hardFeature1,
+              localizations.hardFeature2,
+              localizations.hardFeature3,
+              localizations.hardFeature4,
             ],
           ),
           
@@ -862,7 +872,7 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   const SizedBox(height: 8),
                   
                   Text(
-                    'Puzzle oyunu, zihinsel becerilerinizi geliştirirken eğlenmek için mükemmel bir yoldur.',
+                    localizations.puzzleBenefits,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyMedium,
                   ),
@@ -872,11 +882,11 @@ class _PuzzleTutorialState extends State<PuzzleTutorial> {
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     decoration: BoxDecoration(
-                      color: FunAppTheme.primaryColor.withAlpha(26), // withOpacity(0.1) yerine withAlpha(26)
+                      color: FunAppTheme.primaryColor.withAlpha(26),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
-                      "Puzzle çözmeye hazır mısınız?",
+                      localizations.readyToSolve,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: FunAppTheme.primaryColor,

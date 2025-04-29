@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Puzzle Game',
+            title: 'Puzzle Craft',
             theme: FunAppTheme.lightTheme,
             darkTheme: FunAppTheme.darkTheme,
             themeMode: ThemeMode.system,

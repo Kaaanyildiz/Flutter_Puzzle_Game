@@ -252,7 +252,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         
         // Oyun İsmi Animasyonu
         Text(
-          localizations.appName,
+          "Puzzle Craft", // Doğrudan "Puzzle Craft" kullanarak localizations.appName yerine
           style: const TextStyle(
             fontSize: 48,
             fontWeight: FontWeight.bold,
@@ -515,7 +515,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
       child: Text(
-        '© ${AppLocalizations.of(context)!.appName} 2025',
+        '© Puzzle Craft 2025',
         style: const TextStyle(
           color: Colors.white70,
           fontSize: 12,

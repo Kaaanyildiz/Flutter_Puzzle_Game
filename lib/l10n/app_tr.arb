@@ -1,6 +1,6 @@
 {
   "@@locale": "tr",
-  "appName": "Puzzle Oyunu",
+  "appName": "Puzzle Craft",
   "easyLevel": "Kolay",
   "mediumLevel": "Orta",
   "hardLevel": "Zor",
@@ -51,5 +51,74 @@
   "tutorialStep1": "Bir kareyi boş alana taşımak için üzerine dokun.",
   "tutorialStep2": "Tüm kareleri doğru sırada yerleştirerek bulmacayı tamamla.",
   "tutorialStep3": "Daha az hamle kullanarak ve daha hızlı bitirerek daha iyi puan al!",
-  "getStarted": "Başla"
+  "getStarted": "Başla",
+  
+  "tipsAndStrategies": "İpuçları ve Stratejiler",
+  "skillsDevelopment": "Bu oyun şu becerileri geliştirir:",
+  "visualPerception": "Görsel algı ve dikkat",
+  "problemSolving": "Problem çözme becerisi",
+  "logicalThinking": "Mantıksal düşünme",
+  "patienceConcentration": "Sabır ve konsantrasyon",
+
+  "shuffledPuzzle": "1. Karıştırılmış Puzzle",
+  "shuffledPuzzleDesc": "Oyun başladığında, karışık durumdaki puzzle parçalarını görürsünüz.",
+  "movingPieces": "2. Parçaları Taşıma",
+  "movingPiecesDesc": "Boş alanın yanındaki parçalara dokunarak onları boş alana taşıyabilirsiniz. Sadece boş alanın komşusu olan parçaları hareket ettirebilirsiniz.",
+  "gameGoal": "3. Oyunun Hedefi",
+  "gameGoalDesc": "Tüm parçaları doğru sırayla yerleştirmeye çalışın. Parçalar sıralı şekilde dizildiğinde oyunu tamamlamış olursunuz.",
+  "gameComplete": "Tüm parçalar doğru yerleştiğinde oyun tamamlanır!",
+
+  "cornersTip": "Köşelerden başlayın",
+  "cornersTipDesc": "Öncelikle köşe parçalarını doğru yerlerine yerleştirin.",
+  "topRowTip": "Üst satırı tamamlayın",
+  "topRowTipDesc": "Köşeleri yerleştirdikten sonra, üst satırı tamamlayarak devam edin.",
+  "leftColumnTip": "Sol sütunu tamamlayın",
+  "leftColumnTipDesc": "Üst satırı tamamladıktan sonra, sol sütunu yerleştirerek ilerleyin.",
+  "patienceTip": "Sabırlı olun",
+  "patienceTipDesc": "Bazen bir parçayı yerleştirmek için diğer parçaları geçici olarak yerinden çıkarmanız gerekebilir.",
+
+  "moveForward": "İleri",
+  "moveBack": "Geri",
+
+  "movePlanning": "Hamle Planlama",
+  "movePlanningDesc": "İyi bir puzzle çözücü, hamleleri önceden planlar. Bir parçayı yerine koymadan önce, bunun için gereken hamle dizisini düşünün.",
+  "advancedThinking": "İleri Düşünme",
+  "advancedThinkingDesc": "Tek bir hamle değil, bir dizi hamle düşünerek karmaşık durumları çözebilirsiniz.",
+
+  "usefulTechniques": "Yararlı Teknikler",
+  "techniqueHeader": "Teknik",
+  "descriptionHeader": "Açıklama",
+  "moveTile": "Parçayı taşıma",
+  "moveTileDesc": "Boş alan etrafındaki parçalara dokunarak taşıma",
+  "cycleMovement": "Döngü hareketi",
+  "cycleMovementDesc": "Parçaları döngüsel olarak hareket ettirerek düzenleme",
+  "tempDisplacement": "Geçici yer değiştirme",
+  "tempDisplacementDesc": "Bir parçayı geçici olarak yanlış yere koyma",
+  
+  "stuckTip": "Takıldığınızda bazen bir adım geri gitmek, ileriyi görmek için yardımcı olabilir.",
+
+  "difficultyLevels": "Zorluk Seviyeleri",
+  "easyDifficulty": "Kolay",
+  "easyDifficultyDesc": "3x3 puzzle düzeni (9 parça)",
+  "easyFeature1": "Daha az parça ile kolay çözüm",
+  "easyFeature2": "Başlangıç seviyesi için idealdir",
+  "easyFeature3": "Temel stratejileri öğrenmek için mükemmel",
+  "easyFeature4": "Sınırsız hamle hakkı",
+
+  "mediumDifficulty": "Orta",
+  "mediumDifficultyDesc": "4x4 puzzle düzeni (16 parça)",
+  "mediumFeature1": "Orta zorluk seviyesi",
+  "mediumFeature2": "Daha fazla düşünme gerektirir",
+  "mediumFeature3": "Bilişsel becerileri geliştirmek için ideal",
+  "mediumFeature4": "İyi strateji gerektirir",
+
+  "hardDifficulty": "Zor",
+  "hardDifficultyDesc": "5x5 puzzle düzeni (25 parça)",
+  "hardFeature1": "Yüksek zorluk seviyesi",
+  "hardFeature2": "Daha karmaşık çözüm stratejileri gerektirir",
+  "hardFeature3": "Deneyimli oyuncular için mükemmel bir meydan okuma",
+  "hardFeature4": "Yoğun düşünme ve planlama gerektirir",
+
+  "puzzleBenefits": "Puzzle oyunu, zihinsel becerilerinizi geliştirirken eğlenmek için mükemmel bir yoldur.",
+  "readyToSolve": "Puzzle çözmeye hazır mısınız?"
 }

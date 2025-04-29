@@ -1,7 +1,7 @@
-# Puzzle Game
+# Puzzle Craft
 
 <div align="center">
-  <img src="assets/images/piece1.jpg" alt="Puzzle Game Logo" width="150" style="border-radius: 20px">
+  <img src="assets/images/piece1.jpg" alt="Puzzle Craft Logo" width="150" style="border-radius: 20px">
   <h3>🧩 Akıl Geliştiren Yapboz Oyunu 🧠</h3>
 </div>
 
@@ -9,7 +9,7 @@
 
 ## 📱 Uygulama Tanıtımı
 
-Puzzle Game, Flutter ile geliştirilmiş eğlenceli ve zihin geliştiren bir yapboz oyunudur. Görsel algı, dikkat ve problem çözme becerilerinizi geliştirirken keyifli zaman geçirmenizi sağlar. Farklı zorluk seviyelerinde oynayabilir, rekor kırmak için kendinizi zorlayabilirsiniz.
+Puzzle Craft, Flutter ile geliştirilmiş eğlenceli ve zihin geliştiren bir yapboz oyunudur. Görsel algı, dikkat ve problem çözme becerilerinizi geliştirirken keyifli zaman geçirmenizi sağlar. Farklı zorluk seviyelerinde oynayabilir, rekor kırmak için kendinizi zorlayabilirsiniz.
 
 <div align="center">
   <table>
@@ -165,6 +165,6 @@ Projeye katkıda bulunmak istiyorsanız, lütfen bir pull request açın veya ö
     🌟 Eğer bu projeyi beğendiyseniz, lütfen yıldız vererek destek olun!
   </p>
   <p>
-    © 2025 Puzzle Game | Tüm hakları saklıdır
+    © 2025 Puzzle Craft | Tüm hakları saklıdır
   </p>
 </div>
