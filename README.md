@@ -263,15 +263,11 @@ Bir sorunuz mu var? Bir hata mı buldunuz? Öneriniz mi var? Bizimle iletişime 
     </a>
     🌟 Eğer bu projeyi beğendiyseniz, yıldız vererek destek olun! 🌟
   </p>
+
+
   
   <p>
     © 2025 Puzzle Craft | Tüm hakları saklıdır
   </p>
   
-  <br>
-  <p>
-    <img src="assets/images/piece11.jpg" width="80" style="border-radius: 8px; margin-right: 10px;">
-    <img src="assets/images/piece12.jpg" width="80" style="border-radius: 8px; margin-right: 10px;">
-    <img src="assets/images/piece13.jpg" width="80" style="border-radius: 8px;">
-  </p>
 </div>
