@@ -1,0 +1,55 @@
+{
+  "@@locale": "en",
+  "appName": "Puzzle Game",
+  "easyLevel": "Easy",
+  "mediumLevel": "Medium",
+  "hardLevel": "Hard",
+  "startButton": "Play",
+  "howToPlay": "How to Play?",
+  "subtitle": "Assemble the Pieces, Exercise Your Mind!",
+  "difficultyLevel": "Difficulty Level",
+  "timeElapsed": "Time: {time}",
+  "@timeElapsed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "moves": "Moves: {moveCount}",
+  "@moves": {
+    "placeholders": {
+      "moveCount": {
+        "type": "int"
+      }
+    }
+  },
+  "congratulations": "Congratulations!",
+  "completedIn": "You completed the puzzle in {time}",
+  "@completedIn": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "withMoves": "with {moveCount} moves",
+  "@withMoves": {
+    "placeholders": {
+      "moveCount": {
+        "type": "int"
+      }
+    }
+  },
+  "restart": "Restart",
+  "mainMenu": "Main Menu",
+  "nextLevel": "Next Level",
+  "pause": "Pause",
+  "resume": "Resume",
+  "quit": "Quit",
+  "tutorialTitle": "How to Play",
+  "tutorialStep1": "Tap on a tile to move it into an empty space.",
+  "tutorialStep2": "Arrange all tiles in the correct order to complete the puzzle.",
+  "tutorialStep3": "Use fewer moves and finish faster for a better score!",
+  "getStarted": "Get Started"
+}

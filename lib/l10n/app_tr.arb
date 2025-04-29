@@ -1,0 +1,55 @@
+{
+  "@@locale": "tr",
+  "appName": "Puzzle Oyunu",
+  "easyLevel": "Kolay",
+  "mediumLevel": "Orta",
+  "hardLevel": "Zor",
+  "startButton": "Başla",
+  "howToPlay": "Nasıl Oynanır?",
+  "subtitle": "Parçaları Birleştir, Zihni Çalıştır!",
+  "difficultyLevel": "Zorluk Seviyesi",
+  "timeElapsed": "Süre: {time}",
+  "@timeElapsed": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "moves": "Hamle: {moveCount}",
+  "@moves": {
+    "placeholders": {
+      "moveCount": {
+        "type": "int"
+      }
+    }
+  },
+  "congratulations": "Tebrikler!",
+  "completedIn": "Bulmacayı {time} içinde tamamladınız",
+  "@completedIn": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "withMoves": "{moveCount} hamle ile",
+  "@withMoves": {
+    "placeholders": {
+      "moveCount": {
+        "type": "int"
+      }
+    }
+  },
+  "restart": "Yeniden Başlat",
+  "mainMenu": "Ana Menü",
+  "nextLevel": "Sonraki Seviye",
+  "pause": "Duraklat",
+  "resume": "Devam Et",
+  "quit": "Çık",
+  "tutorialTitle": "Nasıl Oynanır",
+  "tutorialStep1": "Bir kareyi boş alana taşımak için üzerine dokun.",
+  "tutorialStep2": "Tüm kareleri doğru sırada yerleştirerek bulmacayı tamamla.",
+  "tutorialStep3": "Daha az hamle kullanarak ve daha hızlı bitirerek daha iyi puan al!",
+  "getStarted": "Başla"
+}
